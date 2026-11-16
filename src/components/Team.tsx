@@ -116,6 +116,7 @@ const tierRank: Record<string, number> = {
   tech: 6,
   "pr & marketing": 5,
   operations: 4,
+  finance: 3.5,
   design: 3,
   "social media": 2,
   "content and documentation": 1,
@@ -132,6 +133,7 @@ const domainNames: Record<string, string> = {
   "pr & marketing": "PR & Marketing",
   "social media": "Social Media",
   operations: "Operations",
+  finance: "Finance & Sponsorship",
 };
 
 function isMemberArray(value: TierMembers): value is Member[] {

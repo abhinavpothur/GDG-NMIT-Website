@@ -21,6 +21,7 @@ const allDomains = [
   "pr & marketing",
   "social media",
   "operations",
+  "finance",
 ] as const;
 
 interface Member {

@@ -106,7 +106,7 @@ export const DOMAINS: readonly DomainInfo[] = [
   },
   {
     id: "scholarship-finance",
-    dbKey: "scholarship and finance",
+    dbKey: "finance",
     name: "Sponsorship & Finance",
     shortName: "Finance",
     tagline: "Keeping ideas funded and doors open.",

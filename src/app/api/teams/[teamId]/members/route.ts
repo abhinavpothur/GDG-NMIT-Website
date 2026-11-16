@@ -48,7 +48,7 @@ export async function POST(
 
     const validDomains = [
       'club', 'tech', 'design', 'content and documentation',
-      'pr & marketing', 'social media', 'operations'
+      'pr & marketing', 'social media', 'operations', 'finance'
     ];
 
     if (!validDomains.includes(domain)) {
