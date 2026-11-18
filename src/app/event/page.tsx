@@ -24,8 +24,21 @@ export default function EventPage() {
       try {
         const response = await axios.get("/api/events");
         const { pastEvents, upcomingEvents } = response.data;
-        const allEvents = [...(pastEvents || []), ...(upcomingEvents || [])];
-        setEvents(allEvents);
+        const combined = [...(pastEvents || []), ...(upcomingEvents || [])];
+
+        const parseDate = (d: string) => {
+          if (!d) return 0;
+          const parts = d.split("/").map(Number);
+          if (parts.length !== 3) return 0;
+          const [day, month, year] = parts;
+          return new Date(year, (month || 1) - 1, day || 1).getTime();
+        };
+
+        const sortedEvents = combined.sort((a, b) => {
+          return parseDate(b.date) - parseDate(a.date); // Stack order: newest on top, oldest on the bottom
+        });
+
+        setEvents(sortedEvents);
       } catch (err) {
         setError("Failed to fetch events");
         setEvents([]);

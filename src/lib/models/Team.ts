@@ -7,7 +7,8 @@ export enum Domain {
   CONTENT_AND_DOCUMENTATION = 'content and documentation',
   PR_AND_MARKETING = 'pr & marketing',
   SOCIAL_MEDIA = 'social media',
-  OPERATIONS = 'operations'
+  OPERATIONS = 'operations',
+  FINANCE = 'finance'
 }
 
 export enum Tier {

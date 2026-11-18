@@ -3,7 +3,7 @@
 ## 1. Overview & Deployment Topology
 
 * **Cluster:** MongoDB Atlas 3-node Replica Set (`atlas-20a61o-shard-0`)
-* **Database Name:** `test`
+* **Database Name:** `gdg_nmit`
 * **Driver:** Official MongoDB Node.js Driver (`mongodb` package)
 * **Connection Management:** Singleton client pooling with DNS resolution fallbacks (`8.8.8.8`, `1.1.1.1`) located at [`src/lib/mongodb.ts`](src/lib/mongodb.ts).
 * **Application API Architecture:** Next.js Route Handlers interact with the database collections directly using `client.db().collection(...)`.
@@ -117,6 +117,7 @@ Stores individual GDG member profiles. Normalized relationship referencing `team
 * `pr & marketing`
 * `social media`
 * `operations`
+* `finance`
 
 #### Allowed Tiers:
 * `faculty coordinator`
